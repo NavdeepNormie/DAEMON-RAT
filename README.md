@@ -8,12 +8,12 @@ This is a basic command-and-control (C2) Python RAT designed for learning how so
 - Remote shell command execution
 - File download from client to server
 - File upload from server to client
-- persistent so it boots whenever client opens their system
-  
+- Persistent so it boots whenever client opens their system
+- Use pyinstaller to convert daemon.py in a linux or windows executable after making changes to the backdoor 
 
 ## How it works
 
-- `daemon.py` runs on the target machine and connects to the attacker's server.
+- `daemonRAT.py` runs on the target machine and connects to the attacker's server.
 - `listener.py` lets you control the target machine by sending commands like:
   - `upload filename`
   - `download filename`
@@ -26,3 +26,5 @@ This is a basic command-and-control (C2) Python RAT designed for learning how so
 ### Start listener
 ```bash
 python3 listener.py
+
+
