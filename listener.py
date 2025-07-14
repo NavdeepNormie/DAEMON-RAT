@@ -66,6 +66,6 @@ class Listener:
 
 
 # Replace with your attacker's IP or. localhost for testing
-my_listener = Listener("192.168.190.136", 4444)
+my_listener = Listener("ENTER YOUR IP", ENTER port)
 my_listener.run()
 
