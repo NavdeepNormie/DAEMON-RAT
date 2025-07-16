@@ -14,7 +14,7 @@ class Listener:
         print("[+] Got a connection from " + str(address))
 
     def reliable_send(self, data):
-        json_data = json.dumps(data).encode()  # encode to bytes
+        json_data = json.dumps(data).encode()  
         self.connection.sendall(json_data)
 
     def reliable_receive(self):
@@ -22,7 +22,7 @@ class Listener:
         while True:
             try:
                 json_data += self.connection.recv(1024)
-                return json.loads(json_data.decode())  # decode before loading JSON
+                return json.loads(json_data.decode())  
             except json.JSONDecodeError:
                 continue
 
@@ -42,7 +42,7 @@ class Listener:
 
     def read_file(self, path):
         with open(path, "rb") as file:
-            return base64.b64encode(file.read()).decode()  # decode for JSON serialization
+            return base64.b64encode(file.read()).decode()  
 
     def run(self):
         while True:
